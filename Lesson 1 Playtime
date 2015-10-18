@@ -1,0 +1,88 @@
+# First Goal: Create a program that can tell you whether or not you can make a peanut butter and jelly sandwich
+peanut_butter = 33
+bread = 20
+jelly = 5
+#if peanut_butter >= 1 and bread >= 2 and jelly >= 1:
+	#print "You can make a PB&J!"
+#else:
+	#print "You can't make a PB&J."
+
+# Second Goal: Modify that program to tell you: if you can make a sandwich, how many you can make
+#sandwiches = min(peanut_butter,bread/2,jelly)
+#if peanut_butter >= 1 and bread >= 2 and jelly >= 1:
+	#if peanut_butter > 1 and bread > 2 and jelly > 1:
+		#plural = "es"
+	#else:
+		#plural = ""
+	#print "You can make a PB&J! You can make {0} sandwich{1}.".format(sandwiches,plural)
+#else:
+	#print "You can't make a PB&J."
+
+# Third Goal: Modify that program to allow you to make open-face sandwiches if you have an odd number of slices of bread ( )
+sandwiches = min(peanut_butter,bread/2,jelly)
+open_face_sandwiches = min(peanut_butter,bread,jelly)
+#if peanut_butter >= 1 and bread >= 2 and bread % 2 == 0 and jelly >= 1:
+	#if peanut_butter > 1 and bread > 2 and jelly > 1:
+		#plural = "es"
+	#else:
+		#plural = ""
+	#print "You can make a PB&J! You can make {0} sandwich{1}.".format(sandwiches,plural)
+#elif bread % 2 == 1 and jelly >=1 and peanut_butter >= 1:
+	#if peanut_butter > 1 and bread >= 4 and jelly > 1:
+		#plural = "es"
+	#else:
+		#plural = ""
+	#print "You can either make {0} sandwich{1} and an open-face sandwich or {2} open-face sandwiches".format(sandwiches,plural,open_face_sandwiches)
+#else:
+	#print "You can't make a PB&J."
+
+# Fourth Goal: Modify that program to tell you: if you're missing ingredients, which ones you need to be able to make your sandwiches
+#if peanut_butter >= 1 and bread >= 2 and bread % 2 == 0 and jelly >= 1:
+	#if peanut_butter > 1 and bread > 2 and jelly > 1:
+		#plural = "es"
+	#else:
+		#plural = ""
+	#print "You can make a PB&J! You can make {0} sandwich{1}.".format(sandwiches,plural)
+#elif bread % 2 == 1 and jelly >=1 and peanut_butter >= 1:
+	#if peanut_butter > 1 and bread >= 4 and jelly > 1:
+		#plural = "es"
+	#else:
+		#plural = ""
+	#print "You can either make {0} sandwich{1} and an open-face sandwich or {2} open-face sandwiches".format(sandwiches,plural,open_face_sandwiches)
+#else:
+	#print "You can't make a PB&J."
+	#if peanut_butter == 0:
+		#print "You need peanut butter."
+	#if bread == 0:
+		#print "You need bread."
+	#if jelly == 0:
+		#print "You need jelly."
+
+# Fifth Goal: Modify that program to tell you: if you have enough bread and peanut butter but no jelly, that you can make a peanut butter sandwich
+if peanut_butter >= 1 and bread >= 2 and bread % 2 == 0 and jelly >= 1:
+	if peanut_butter > 1 and bread > 2 and jelly > 1:
+		plural = "es"
+	else:
+		plural = ""
+	print "You can make a PB&J! You can make {0} sandwich{1}.".format(sandwiches,plural)
+elif bread % 2 == 1 and jelly >=1 and peanut_butter >= 1:
+	if peanut_butter > 1 and bread >= 4 and jelly > 1:
+		plural = "es"
+	else:
+		plural = ""
+	print "You can either make {0} sandwich{1} and an open-face sandwich or {2} open-face sandwiches".format(sandwiches,plural,open_face_sandwiches)
+else:
+	if peanut_butter == 0 and jelly >= 1 and bread >= 1:
+		if jelly > 1 and bread > 2:
+			plural = "es"
+		else:
+			plural = ""
+		print "You need peanut butter, but you can make {0} jelly sandwich{1}.".format(min(jelly,bread/2),plural)
+	elif bread == 0:
+		print "You need bread."
+	else:
+		if peanut_butter > 1 and bread > 2:
+			plural = "es"
+		else:
+			plural = ""
+		print "You need jelly, but you can make {0} peanut butter sandwich{1}.".format(min(peanut_butter,bread/2),plural)
